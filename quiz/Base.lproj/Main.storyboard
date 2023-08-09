@@ -1,24 +1,87 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="quiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a3g-qh-KYw">
+                                <rect key="frame" x="162" y="343" width="69" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Answer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Tb-13-pQV">
+                                <rect key="frame" x="168" y="433" width="57" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fE7-Gy-CCT">
+                                <rect key="frame" x="133" y="502" width="127" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Show Answer"/>
+                                <connections>
+                                    <action selector="showAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9hH-uC-iX0"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EC7-ae-zZH">
+                                <rect key="frame" x="157.33333333333334" y="343" width="78.333333333333343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jjq-YE-dgZ">
+                                <rect key="frame" x="130" y="562" width="133" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Next Question"/>
+                                <connections>
+                                    <action selector="nextQuestion:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WpE-63-CtL"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="9Tb-13-pQV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5pQ-5g-fw7"/>
+                            <constraint firstItem="Jjq-YE-dgZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GMh-1h-W65"/>
+                            <constraint firstItem="a3g-qh-KYw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LnL-tu-23u"/>
+                            <constraint firstItem="Jjq-YE-dgZ" firstAttribute="top" secondItem="fE7-Gy-CCT" secondAttribute="bottom" constant="25" id="Lvp-Wm-8O8"/>
+                            <constraint firstItem="a3g-qh-KYw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="284" id="NYx-dN-zjq"/>
+                            <constraint firstItem="fE7-Gy-CCT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YQT-mq-8a1"/>
+                            <constraint firstItem="9Tb-13-pQV" firstAttribute="top" secondItem="a3g-qh-KYw" secondAttribute="bottom" constant="69" id="ZQQ-Tn-9Ma"/>
+                            <constraint firstItem="EC7-ae-zZH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="284" id="dSN-bf-ZIm"/>
+                            <constraint firstItem="fE7-Gy-CCT" firstAttribute="top" secondItem="9Tb-13-pQV" secondAttribute="bottom" constant="48" id="e1h-2t-Nek"/>
+                            <constraint firstItem="EC7-ae-zZH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xSJ-ej-ZJA"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="answer" destination="9Tb-13-pQV" id="HZg-f7-Ia2"/>
+                        <outlet property="nextQuestion" destination="EC7-ae-zZH" id="Qhm-WZ-4TH"/>
+                        <outlet property="question" destination="a3g-qh-KYw" id="INO-4a-vFX"/>
+                        <outlet property="question1Constraint" destination="LnL-tu-23u" id="Ra8-UW-Hc3"/>
+                        <outlet property="question2Constraint" destination="xSJ-ej-ZJA" id="lM2-5x-K7e"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="77" y="4"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
